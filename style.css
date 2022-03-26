@@ -1,0 +1,236 @@
+:root{
+    --Soft-Cyan: hsl(174, 77%, 80%);
+    --Strong-Cyan: hsl(174, 86%, 45%);
+    --Light-Grayish-Red: hsl(14, 92%, 95%);
+    --Light-Red: hsl(15, 100%, 70%);
+    --Pale-Blue: hsl(226, 100%, 87%);
+    --Very-Pale-Blue: hsl(230, 100%, 99%);
+    --Light-Grayish-Blue: hsl(224, 65%, 95%);
+    --Light-Grayish-Blue: hsl(223, 50%, 87%);
+    --Grayish-Blue: hsl(225, 20%, 60%);
+    --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--Very-Pale-Blue);
+    font-size: 15px;
+    font-family: "Manrope", serif;
+    background-image: url("/images/bg-pattern.svg");
+    display: flex;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-size: 100% auto;
+    color: var(--Grayish-Blue)
+}
+
+h1{
+    color: var(--Dark-Desaturated-Blue);
+    margin-bottom: .5rem;
+}
+
+.display{
+    display: block;
+}
+
+.header{
+    margin-top: 3rem;
+    text-align: center;
+    background-image: url("/images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first-section{
+  display: flex;
+  padding: 0 1rem;
+}
+
+.switch-button{
+    padding:2rem;
+    display: flex;
+    font-size: 12px;
+    text-align: right;
+    justify-content:flex-end;
+}
+
+.monthly, .yearly, .discount, .switch{
+    padding: 0.5rem;
+}
+
+.discount{
+    background-color: var(--Light-Grayish-Red);
+    border-radius: 40px;
+    padding: 7px 10px;
+    text-align: center;
+    color: var(--Light-Red)
+}
+
+.second-section{
+    display: flex;
+    padding: 0 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left-list{
+    width: 75%;
+    padding: 1rem;
+}
+
+.start-button{
+    width: 25%;
+}
+
+.views, .pricing{
+    width: 50%;
+}
+
+.views{
+    padding: 0.5rem 1rem;
+}
+
+.price{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--Dark-Desaturated-Blue);
+}
+
+.bar{
+    padding: 1.2rem;
+}
+
+
+
+.bar-input{
+    height: 10px;
+    width: 100%;
+    appearance: none;
+    background-color: var(--Soft-Cyan);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.bar-input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: var(--Strong-Cyan);
+    border-radius: 50%;
+}
+
+.bar-input::-webkit-slider-thumb:hover{
+    box-shadow: 0 0 10px var(--Strong-Cyan);
+}
+
+.card{
+    background-color: #fff;
+    padding: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--Light-Grayish-Blue)
+}
+
+ul{
+    list-style-image: url(/images/icon-check.svg);
+}
+
+hr{
+    border-top: var(--Grayish-Blue);
+}
+
+.start-button{
+    width: 75%
+}
+
+.btn{
+    background-color: var(--Dark-Desaturated-Blue);
+    color: #fff;
+    border-radius: 60px;
+    border: none;
+    font-weight: bold;
+    padding: 15px 45px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider{
+    background-color: var(--Strong-Cyan);
+}
+
+input:focus + .slider{
+    box-shadow: 0 0 1px var(--Strong-Cyan);
+}
+
+input:checked + .slider:before{
+    -webkit-transform: translateX(29px);
+    -ms-transform: translateX(29px);
+    transform: translateX(29px);
+}
+
+.slider{
+    border-radius: 35px;
+}
+
+.slider:before{
+    border-radius: 50%;
+}
+
+
+/* 
+@media only screen and (min-width: 376px){
+
+} */

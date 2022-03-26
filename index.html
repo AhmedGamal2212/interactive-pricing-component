@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hubballi&family=Manrope:wght@600;800&family=Merienda&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>sign-up for our 30-day trial, No credit card required</p>
+      </div>
+      <div class="card">
+        <div class="first-section">
+          <!-- titles to explain what is the current plan -->
+
+          <!-- the current pageviews in the chosen plan -->
+          <div class="views">
+            <p><span class="num">100</span>K PAGEVEIWS</p>
+          </div>
+
+          <!-- the pricing of the current chosing plan -->
+          <div class="pricing">
+            <p><span class="price">$16.00</span> /<span class="every">month</span></p>
+          </div>
+        </div>
+
+          <!-- the plan bar -->
+          <div class="bar">
+            <input
+              type="range"
+              min="1"
+              max="6"
+              step="1"
+              value="1"
+              class="bar-input"
+            />
+          </div>
+
+          <div class="switch-button">
+            <span class="monthly">Monthly billing</span>
+
+            <label class="switch">
+              <input type="checkbox"/>
+              <span class="slider"></span>
+            </label>
+            
+            <span class="yearly">Yearly billing</span>
+            <span class="discount">25% discount</span>
+          </div>
+        <hr />
+
+        <div class="second-section">
+          <div class="left-list">
+            <ul>
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+          </div>
+
+          <div class="start-button">
+            <button class="btn">Start my trial</button>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
